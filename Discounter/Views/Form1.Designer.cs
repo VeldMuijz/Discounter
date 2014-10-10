@@ -36,6 +36,9 @@
             this.dGVMembers = new System.Windows.Forms.DataGridView();
             this.labelFileName = new System.Windows.Forms.Label();
             this.labelProgress = new System.Windows.Forms.Label();
+            this.bgWorkerReadFile = new System.ComponentModel.BackgroundWorker();
+            this.bgWorkerCreateHash = new System.ComponentModel.BackgroundWorker();
+            this.buttonCreateHash = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGVMembers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,12 +110,23 @@
             this.labelProgress.TabIndex = 7;
             this.labelProgress.Text = "Chilling...";
             // 
+            // buttonCreateHash
+            // 
+            this.buttonCreateHash.Location = new System.Drawing.Point(36, 135);
+            this.buttonCreateHash.Name = "buttonCreateHash";
+            this.buttonCreateHash.Size = new System.Drawing.Size(136, 23);
+            this.buttonCreateHash.TabIndex = 8;
+            this.buttonCreateHash.Text = "Creeer Kortingscodes";
+            this.buttonCreateHash.UseVisualStyleBackColor = true;
+            this.buttonCreateHash.Click += new System.EventHandler(this.buttonCreateHash_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(954, 444);
+            this.Controls.Add(this.buttonCreateHash);
             this.Controls.Add(this.labelProgress);
             this.Controls.Add(this.labelFileName);
             this.Controls.Add(this.dGVMembers);
@@ -139,6 +153,7 @@
         private System.Windows.Forms.DataGridView dGVMembers;
         private System.Windows.Forms.Label labelFileName;
         private System.Windows.Forms.Label labelProgress;
+        private System.Windows.Forms.Button buttonCreateHash;
     }
 }
 

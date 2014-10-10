@@ -11,9 +11,10 @@ namespace Discounter
     class Parser
     {
         
-        public static Array readFile(string path) {
+        public static Member[] readFile(string path) {
             
             FileHelperEngine engine = new FileHelperEngine(typeof(Member));
+            
             Member[] mem = engine.ReadFile(path) as Member[];
  
             return mem;
